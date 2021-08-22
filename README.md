@@ -4,7 +4,7 @@ This is an easy way to abstract Core Data Predicates into Swift Enums. This ensu
 There are two main Enums involved:
 
 1. **Operator** accepts an array of anything conforming to Filtering, and can be set to AND or OR to determine how to filter the included items, like: ```(This AND That) OR (This OR That)```
-2. **Filter** (name can be anything) provides the enum cases to use for filtering. Combined with Operators, you can create complex filter predicates with ease.  
+2. **Filter** provides the enum cases to use for filtering. Combined with Operators, you can create complex filter predicates with ease.  
 
 The only requirements for either of these is that they conform to the **Filtering** protocol, which requires them to return an NSPredicate, which in turn get combined using the operators. This all ends up returning a single NSPredicate to provide Core Data to represent your complex query.
 
